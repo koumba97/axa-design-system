@@ -1,18 +1,22 @@
 .axa-card {
-    border: solid 20px;
-    .large {
-        min-width: 200px;
-
-        .cover-img {
-            width: 546px;
-            height: 407px;
-        }
-    }
+    border: solid 2px;
     .container {
         display: flex;
+
         .cover-img {
-            aspect-ratio: 1 / 1;
-            min-width: 88px;
+            width: 100%;
+            min-width: 0;
+            display: flex;
+            align-self: stretch;
+        }
+
+        &.sm {
+            min-width: 440px;
+            height: 88px;
+        }
+
+        &.lg {
+            min-height: 240px;
         }
     }
 }

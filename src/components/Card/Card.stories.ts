@@ -13,10 +13,10 @@ const meta = {
             card-date=${args.cardDate ?? ""}
             link=${args.link ?? "functional"}
             breakpoint=${args.breakpoint ?? false}
-            card-title=${args.cardTitle ?? "cover"}
+            cardTitle=${args.cardTitle ?? "cover"}
             content=${args.content ?? ""}
             subhead=${args.subhead ?? ""}
-            is-inverse=${args.isInverse ?? ""}
+            isInverse=${args.isInverse ?? ""}
             inverted=${args.inverted ?? ""}
         ></axa-card>
     `,

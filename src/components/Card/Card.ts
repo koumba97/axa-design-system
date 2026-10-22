@@ -1,11 +1,13 @@
-import { html, LitElement } from "lit";
-import "./card.scss";
+import { html, LitElement, unsafeCSS } from "lit";
+import styles from "./card.scss?inline";
 import type { CardProps } from "./Card.types";
 import { customElement, property } from "lit/decorators.js";
 import type { Link, Size } from "../../types/Common.types";
 
 @customElement("axa-card")
 export class Card extends LitElement implements CardProps {
+    static styles = unsafeCSS(styles);
+
     @property({ type: String })
     type: Size = "lg";
 
@@ -38,18 +40,22 @@ export class Card extends LitElement implements CardProps {
 
     render() {
         return html`<div class="axa-card">
-        <section class="large">
-            <div class="container>
+            <section class="${this.type} container">
                 <div class="cover-img">
-                <p>ookok</p>
-                      ${this.isInverse}
                     <axa-image
                         src=${this.image}
                         alt=${this.cardTitle}
                     ></axa-image>
                 </div>
-            </div>
-        </section>
-    </div>`;
+                <div class="horizontal-settings">
+                    <div class="v-center">
+                        <p class="subhead">${this.subhead}</p>
+                        <h5>${this.cardTitle}</h5>
+                        <p class="date">${this.cardDate}</p>
+                        <p class="preview">${this.content}</p>
+                    </div>
+                </div>
+            </section>
+        </div>`;
     }
 }
