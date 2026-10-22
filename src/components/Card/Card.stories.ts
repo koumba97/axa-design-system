@@ -1,11 +1,25 @@
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import type { CardProps } from "./Card.types";
 import { Card } from "./Card";
+import { html } from "lit";
 
 const meta = {
     title: "Example/Card",
     tags: ["autodocs"],
-    render: (args) => Card(args),
+    render: (args: CardProps) => html`
+        <axa-card
+            type=${args.type ?? ""}
+            image=${args.image ?? ""}
+            card-date=${args.cardDate ?? ""}
+            link=${args.link ?? "functional"}
+            breakpoint=${args.breakpoint ?? false}
+            card-title=${args.cardTitle ?? "cover"}
+            content=${args.content ?? ""}
+            subhead=${args.subhead ?? ""}
+            is-inverse=${args.isInverse ?? ""}
+            inverted=${args.inverted ?? ""}
+        ></axa-card>
+    `,
     argTypes: {
         type: {
             control: { type: "select" },
