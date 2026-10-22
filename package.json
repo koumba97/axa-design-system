@@ -9,20 +9,21 @@
         "build-storybook": "storybook build"
     },
     "dependencies": {
-        "lit": "^3.3.3"
+        "lit": "^3.3.3",
+        "sass": "^1.106.1"
     },
     "devDependencies": {
-        "typescript": "~6.0.3",
-        "vite": "^8.3.4",
-        "storybook": "^10.6.3",
-        "@storybook/web-components-vite": "^10.6.3",
         "@chromatic-com/storybook": "latest",
-        "@storybook/addon-vitest": "^10.6.3",
         "@storybook/addon-a11y": "^10.6.3",
         "@storybook/addon-docs": "^10.6.3",
-        "vitest": "latest",
+        "@storybook/addon-vitest": "^10.6.3",
+        "@storybook/web-components-vite": "^10.6.3",
         "@vitest/browser-playwright": "latest",
         "@vitest/coverage-v8": "latest",
-        "playwright": "latest"
+        "playwright": "latest",
+        "storybook": "^10.6.3",
+        "typescript": "~6.0.3",
+        "vite": "^8.3.4",
+        "vitest": "latest"
     }
 }

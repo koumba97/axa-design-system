@@ -47,5 +47,22 @@ type Story = StoryObj<CardProps>;
 export const Default: Story = {
     args: {
         type: "lg",
+        image: "https://picsum.photos/500/800",
+        cardDate: "11/12/2020",
+        link: [
+            {
+                url: "https://www.google.com",
+                label: "MAKE A CLAIM",
+                type: "link",
+                variation: "primary",
+                isInverse: true,
+            },
+        ],
+        breakpoint: "750",
+        cardTitle: "Car Insurance",
+        content:
+            "AXA Car insurance is tailored to your needs. Get your car insurance quote. And if you've got more than one car registered at your home address, check out our MultiCar discount.",
+        subhead: "Member online",
+        isInverse: false,
     },
 };
