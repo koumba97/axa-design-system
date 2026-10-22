@@ -1,9 +1,7 @@
-import type { Link } from "../../types/Common.types";
-
-export type CardSize = "sm" | "md" | "lg" | "bg";
+import type { Link, Size } from "../../types/Common.types";
 
 export interface CardProps {
-    type: CardSize;
+    type: Size;
     image: string;
     cardDate: string;
     link: Link[];
