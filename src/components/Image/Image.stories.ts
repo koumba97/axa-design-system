@@ -1,11 +1,22 @@
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import type { ImageProps } from "./Image.types";
 import { Image } from "./Image";
+import { html } from "lit";
 
 const meta = {
     title: "Example/Image",
     tags: ["autodocs"],
-    render: (args) => Image(args),
+    render: (args: ImageProps) => html`
+        <axa-image
+            src=${args.src ?? ""}
+            alt=${args.alt ?? ""}
+            ratio=${args.ratio ?? "1:1"}
+            ?has-border=${args.hasBorder ?? false}
+            background-color=${args.backgroundColor ?? "functional"}
+            object-fit=${args.objectFit ?? "cover"}
+            custom-id=${args.customId ?? ""}
+        ></axa-image>
+    `,
     argTypes: {
         src: {
             control: "text",
@@ -39,7 +50,7 @@ type Story = StoryObj<ImageProps>;
 
 export const Default: Story = {
     args: {
-        src: "https://i.imgur.com/V0UIptf.png",
+        src: "https://picsum.photos/500/800",
         alt: "Sample image",
         ratio: "1:1",
         hasBorder: false,

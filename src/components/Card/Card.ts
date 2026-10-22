@@ -1,4 +1,5 @@
 import { html } from "lit";
+import { Image } from "../Image/Image";
 import "./card.scss";
 import type { CardProps } from "./Card.types";
 
