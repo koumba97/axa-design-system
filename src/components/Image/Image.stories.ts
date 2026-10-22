@@ -13,9 +13,9 @@ const meta = {
                 alt=${args.alt ?? ""}
                 ratio=${args.ratio ?? "1:1"}
                 .hasBorder=${args.hasBorder ?? false}
-                background-color=${args.backgroundColor ?? "functional"}
-                object-fit=${args.objectFit ?? "cover"}
-                custom-id=${args.customId ?? ""}
+                backgroundColor=${args.backgroundColor ?? "functional"}
+                objectFit=${args.objectFit ?? "cover"}
+                customId=${args.customId ?? ""}
             ></axa-image>
         </div>
     `,

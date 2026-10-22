@@ -2,6 +2,7 @@
     /* PRIMITIVE TOKENS */
     /* colors */
     --black-10: rgba(0, 0, 0, 0.10);
+    --blue-100: rgba(226, 239, 255, 1.00);
 
     /* sizes */
     --dimension-8: 8px;
@@ -9,4 +10,5 @@
     /* SEMENTIC TOKENS */
     --radius-md: var(--dimension-8);
     --stroke-regular: var(--black-10);
+    --bg-decorative-emphasis-expressive-low: var(--blue-100);
 }

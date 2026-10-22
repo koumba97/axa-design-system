@@ -37,11 +37,19 @@ export class Image extends LitElement implements ImageProps {
     render() {
         const ratioClass = `ratio-${this.ratio.replace(":", "-")}`;
         const borderClass = this.hasBorder ? "has-border" : "";
+        const objectFitClass = `object-fit-${this.objectFit}`;
+        const backgroundColor =
+            this.backgroundColor == "expressive" ? "background-expressive" : "";
 
-        return html`<div class="axa-image">
-            <div class="${ratioClass} ${borderClass} image-container">
-                ${this.hasBorder}
-                <img class=${["axa-card-image"]} src=${[this.src]} />
+        return html`<div class="axa-image" id=${this.customId}>
+            <div
+                class="${ratioClass} ${borderClass} ${backgroundColor} image-container"
+            >
+                <img
+                    class="axa-card-image ${objectFitClass}"
+                    src=${this.src}
+                    alt=${this.alt}
+                />
             </div>
         </div>`;
     }
