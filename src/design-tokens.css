@@ -1,0 +1,12 @@
+:root {
+    /* PRIMITIVE TOKENS */
+    /* colors */
+    --black-10: rgba(0, 0, 0, 0.10);
+
+    /* sizes */
+    --dimension-8: 8px;
+
+    /* SEMENTIC TOKENS */
+    --radius-md: var(--dimension-8);
+    --stroke-regular: var(--black-10);
+}

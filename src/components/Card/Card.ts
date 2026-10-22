@@ -37,10 +37,12 @@ export class Card extends LitElement implements CardProps {
     inverted = false;
 
     render() {
-        return html`<div class=${["axa-card"]}>
-        <section class=${["large"]}>
+        return html`<div class="axa-card">
+        <section class="large">
             <div class="container>
                 <div class="cover-img">
+                <p>ookok</p>
+                      ${this.isInverse}
                     <axa-image
                         src=${this.image}
                         alt=${this.cardTitle}

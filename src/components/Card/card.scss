@@ -1,6 +1,6 @@
 .axa-card {
+    border: solid 20px;
     .large {
-        border: solid 20px;
         min-width: 200px;
 
         .cover-img {
@@ -14,7 +14,5 @@
             aspect-ratio: 1 / 1;
             min-width: 88px;
         }
-    }
-    .medium {
     }
 }

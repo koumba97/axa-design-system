@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import type { CardProps } from "./Card.types";
-import { Card } from "./Card";
 import { html } from "lit";
+import { Card } from "./Card";
 
 const meta = {
     title: "Example/Card",

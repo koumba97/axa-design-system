@@ -1,4 +1,5 @@
-import { html, LitElement } from "lit";
+import { html, LitElement, unsafeCSS } from "lit";
+import "./image.scss";
 import type {
     ImageBackgroundColor,
     ImageObjectFit,
@@ -6,9 +7,12 @@ import type {
 } from "./Image.types";
 import type { Ratio } from "../../types/Common.types";
 import { customElement, property } from "lit/decorators.js";
+import styles from "./image.scss?inline";
 
 @customElement("axa-image")
 export class Image extends LitElement implements ImageProps {
+    static styles = unsafeCSS(styles);
+
     @property({ type: String })
     src = "";
 
@@ -31,8 +35,14 @@ export class Image extends LitElement implements ImageProps {
     customId?: string;
 
     render() {
+        const ratioClass = `ratio-${this.ratio.replace(":", "-")}`;
+        const borderClass = this.hasBorder ? "has-border" : "";
+
         return html`<div class="axa-image">
-            <img class=${["axa-card-image"]} src=${[this.src]} />
+            <div class="${ratioClass} ${borderClass} image-container">
+                ${this.hasBorder}
+                <img class=${["axa-card-image"]} src=${[this.src]} />
+            </div>
         </div>`;
     }
 }

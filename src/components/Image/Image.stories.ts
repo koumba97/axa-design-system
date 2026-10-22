@@ -7,15 +7,17 @@ const meta = {
     title: "Example/Image",
     tags: ["autodocs"],
     render: (args: ImageProps) => html`
-        <axa-image
-            src=${args.src ?? ""}
-            alt=${args.alt ?? ""}
-            ratio=${args.ratio ?? "1:1"}
-            ?has-border=${args.hasBorder ?? false}
-            background-color=${args.backgroundColor ?? "functional"}
-            object-fit=${args.objectFit ?? "cover"}
-            custom-id=${args.customId ?? ""}
-        ></axa-image>
+        <div style="display: flex; width:200px;">
+            <axa-image
+                src=${args.src ?? ""}
+                alt=${args.alt ?? ""}
+                ratio=${args.ratio ?? "1:1"}
+                .hasBorder=${args.hasBorder ?? false}
+                background-color=${args.backgroundColor ?? "functional"}
+                object-fit=${args.objectFit ?? "cover"}
+                custom-id=${args.customId ?? ""}
+            ></axa-image>
+        </div>
     `,
     argTypes: {
         src: {

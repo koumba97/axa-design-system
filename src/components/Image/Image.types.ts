@@ -7,7 +7,7 @@ export interface ImageProps {
     src: string;
     alt: string;
     ratio: Ratio;
-    hasBorder: boolean;
+    hasBorder?: boolean;
     backgroundColor: ImageBackgroundColor;
     objectFit: ImageObjectFit;
     customId?: string;
