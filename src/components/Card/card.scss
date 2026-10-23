@@ -46,14 +46,32 @@
             min-width: 440px;
             height: 88px;
             gap: var(--gap-sm);
+            .content {
+                .top {
+                    margin: 0 0 4px 0;
+                }
+                .title {
+                    font-size: 16px;
+                    font-family: var(--font-family-base);
+                    margin-bottom: 4px;
+                }
+                .subhead {
+                    font-size: 8px;
+                }
+                .text-content {
+                    font-size: 12px;
+                    margin: 0;
+                }
+                .date {
+                    font-size: 8px;
+                    margin-top: 8px;
+                }
+            }
         }
 
         &.md {
             height: 185px;
             gap: var(--gap-md);
-            .content {
-                //border: solid;
-            }
         }
 
         &.lg {
@@ -78,7 +96,6 @@
                 flex-direction: column;
                 justify-content: end;
                 background-color: var(--bg-card-background-color);
-                //background-color: pink;
                 padding: 16px 12px;
                 height: stretch;
 
@@ -88,7 +105,6 @@
                 .subhead,
                 .date {
                     color: var(--neutral-00);
-                    //border: solid;
                 }
 
                 .bottom {
