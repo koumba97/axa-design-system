@@ -9,6 +9,8 @@ const meta = {
     render: (args: ButtonProps) => html`
             <axa-button
                 label=${args.label ?? ""}
+                buttonType=${args.type ?? "button"}
+                url=${args.url ?? ""}
             ></axa-button>
         </div>
     `,

@@ -44,4 +44,8 @@
     --card-subhead-color: var(--red-40);
     --card-date-color: var(--neutral-30);
     --card-content-color: var(--neutral-40);
+
+    --button-background-color: var(--red-40);
+    --button-text-color: var(--neutral-00);
+    --button-link-text-color: var(--neutral-40);
 }

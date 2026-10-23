@@ -53,16 +53,36 @@ export class Card extends LitElement implements CardProps {
                 <div class="content">
                     <p class="top">
                         <span class="subhead">${this.subhead}</span>
-                        ${this.type !== "sm" && this.type !== "md"
-                            ? html` <span class="date">
-                                  - ${this.cardDate}</span
-                              >`
-                            : null}
+                        ${
+                            this.type !== "sm" && this.type !== "md"
+                                ? html` <span class="date">
+                                      - ${this.cardDate}</span
+                                  >`
+                                : null
+                        }
                     </p>
 
                     <h5 class="title">${this.cardTitle}</h5>
                     <p class="text-content">${this.content}</p>
                     <p class="date bottom">${this.cardDate}</p>
+
+                    ${
+                        this.link.length > 0
+                            ? html`<div class="links-container">
+                                  ${this.link.map(
+                                      (link) => html`
+                                          <axa-button
+                                              url=${link.url}
+                                              label=${link.label}
+                                              type=${link.type}
+                                              >${link.label}</axa-button
+                                          >
+                                      `,
+                                  )}
+                              </div>`
+                            : null
+                    }
+                    </div>
                 </div>
             </section>
         </div>`;

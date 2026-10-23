@@ -21,6 +21,7 @@
                 color: var(--card-date-color);
                 gap: 8px;
             }
+
             .subhead {
                 text-transform: uppercase;
                 font-weight: 600;
@@ -42,6 +43,9 @@
             .text-content {
                 color: var(--card-content-color);
                 margin-bottom: 8px;
+            }
+            .links-container {
+                margin-top: 12px;
             }
         }
 
@@ -153,7 +157,6 @@
             gap: var(--gap-sm);
 
             &.md {
-                //max-width: 200px;
                 height: unset;
                 flex-direction: column;
 
