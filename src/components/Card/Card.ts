@@ -41,13 +41,8 @@ export class Card extends LitElement implements CardProps {
     render() {
         return html`<div class="axa-card">
             <section class="${this.type} container">
-                <div class="cover-img">
-                    <axa-image
-                        src=${this.image}
-                        alt=${this.cardTitle}
-                    ></axa-image>
-                </div>
-                <div class="horizontal-settings">
+                <axa-image src=${this.image} alt=${this.cardTitle}></axa-image>
+                <div class="horizontal-settings content">
                     <div class="v-center">
                         <p class="subhead">${this.subhead}</p>
                         <h5>${this.cardTitle}</h5>

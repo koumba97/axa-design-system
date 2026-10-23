@@ -1,14 +1,17 @@
+@use "../../styles/variables.scss" as *;
 .axa-card {
     border: solid 2px;
+    width: fit-content;
     .container {
         display: flex;
+        justify-content: flex-start;
+        gap: var(--gap-3xl);
 
-        .cover-img {
-            width: 100%;
-            min-width: 0;
-            display: flex;
-            align-self: stretch;
-        }
+        // .cover-img {
+        //     min-width: 0;
+        //     display: flex;
+        //     align-self: stretch;
+        // }
 
         &.sm {
             min-width: 440px;
@@ -17,6 +20,31 @@
 
         &.lg {
             min-height: 240px;
+            max-height: 400px;
+            .content {
+                border: solid;
+                max-width: 400px;
+            }
+        }
+    }
+
+    // LARGE
+    @media (min-width: $device-breakpoint-md) and (max-width: $device-breakpoint-lg) {
+        .container {
+            border: solid pink 2px;
+        }
+    }
+
+    // MEDIUM
+    @media (min-width: $device-breakpoint-sm) and (max-width: $device-breakpoint-md) {
+        .container {
+            flex-direction: column;
+            border: solid blue 2px;
+            max-width: 300px;
+
+            &.lg {
+                max-height: unset;
+            }
         }
     }
 }

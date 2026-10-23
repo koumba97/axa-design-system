@@ -1,5 +1,5 @@
 import type { Preview } from "@storybook/web-components-vite";
-import "../src/design-tokens.css";
+import "../src/styles/design-tokens.css";
 const preview: Preview = {
     parameters: {
         controls: {

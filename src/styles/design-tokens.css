@@ -1,0 +1,29 @@
+:root {
+    /* PRIMITIVE TOKENS */
+    /* colors */
+    --black-10: rgba(0, 0, 0, 0.1);
+    --blue-100: rgba(226, 239, 255, 1);
+
+    /* sizes */
+    --dimension-8: 8px;
+    --dimension-24: 24px;
+
+    --width-1440: 1440px;
+    --width-1024: 1024px;
+    --width-768: 768px;
+    --width-320: 320px;
+
+    /* SEMENTIC TOKENS */
+    --radius-md: var(--dimension-8);
+
+    --stroke-regular: var(--black-10);
+
+    --bg-decorative-emphasis-expressive-low: var(--blue-100);
+
+    --gap-3xl: var(--dimension-24);
+
+    --device-breakpoint-xl: var(--width-1440)
+        --device-breakpoint-lg: var(--width-1024)
+        --device-breakpoint-md: var(--width-768)
+        --device-breakpoint-sm: var(--width-320);
+}
