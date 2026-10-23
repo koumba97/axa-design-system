@@ -1,29 +1,39 @@
 :root {
     /* PRIMITIVE TOKENS */
     /* colors */
-    --black-10: rgba(0, 0, 0, 0.1);
-    --blue-100: rgba(226, 239, 255, 1);
+    --neutral-50: #353b3d; /* card title */
+    --neutral-40: #464c4e; /* card content */
+    --neutral-30: #7a7a7a; /* card date*/
+    --neutral-10: #d8d8d8; /* card border*/
+    --neutral-00: #ffffff;
+
+    --neutral-opacity-50: rgba(52, 60, 61, 0.72);
+
+    --red-40: #d14623;
+
+    --blue-10: #d8eaff;
 
     /* sizes */
-    --dimension-8: 8px;
-    --dimension-24: 24px;
+    --size-4: 4px;
+    --size-8: 8px;
+    --size-12: 12px;
+    --size-16: 16px;
+    --size-20: 20px;
+    --size-24: 24px;
 
-    --width-1440: 1440px;
-    --width-1024: 1024px;
-    --width-768: 768px;
-    --width-320: 320px;
 
     /* SEMENTIC TOKENS */
-    --radius-md: var(--dimension-8);
+    --radius-sm: var(--size-4);
+    --radius-md: var(--size-8);
+    --radius-lg: var(--size-16);
 
-    --stroke-regular: var(--black-10);
+    --stroke-regular: var(--neutral-10);
 
-    --bg-decorative-emphasis-expressive-low: var(--blue-100);
+    --bg-expressive: var(--blue-10);
 
-    --gap-3xl: var(--dimension-24);
+    --gap-sm: var(--size-8);
+    --gap-md: var(--size-16);
+    --gap-lg: var(--size-24);
 
-    --device-breakpoint-xl: var(--width-1440)
-        --device-breakpoint-lg: var(--width-1024)
-        --device-breakpoint-md: var(--width-768)
-        --device-breakpoint-sm: var(--width-320);
+    --bg-card-background-color: var(--neutral-opacity-50);
 }
