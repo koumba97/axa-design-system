@@ -10,7 +10,7 @@ const meta = {
         <axa-card
             type=${args.type ?? ""}
             image=${args.image ?? ""}
-            card-date=${args.cardDate ?? ""}
+            cardDate=${args.cardDate ?? ""}
             link=${args.link ?? "functional"}
             breakpoint=${args.breakpoint ?? false}
             cardTitle=${args.cardTitle ?? "cover"}

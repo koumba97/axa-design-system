@@ -23,7 +23,8 @@
 
 
     /* SEMENTIC TOKENS */
-    --font-family-base: 'Publico Headline', sans-serif;
+    --font-family-base-title: 'Publico Headline';
+    --font-family-base: 'Helvetica';
 
     --radius-sm: var(--size-4);
     --radius-md: var(--size-8);
@@ -38,4 +39,9 @@
     --gap-lg: var(--size-24);
 
     --bg-card-background-color: var(--neutral-opacity-50);
+
+    --card-title-color: var(--neutral-50);
+    --card-subhead-color: var(--red-40);
+    --card-date-color: var(--neutral-30);
+    --card-content-color: var(--neutral-40);
 }

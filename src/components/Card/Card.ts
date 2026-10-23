@@ -50,10 +50,18 @@ export class Card extends LitElement implements CardProps {
                     ratio=${imageRatio}
                 ></axa-image>
                 <div class="content">
-                    <p class="subhead">${this.subhead}</p>
-                    <h5>${this.cardTitle}</h5>
-                    <p class="date">${this.cardDate}</p>
-                    <p class="preview">${this.content}</p>
+                    <p class="top">
+                        <span class="subhead">${this.subhead}</span>
+                        ${this.type !== "sm" && this.type !== "md"
+                            ? html` <span class="date">
+                                  - ${this.cardDate}</span
+                              >`
+                            : null}
+                    </p>
+
+                    <h5 class="title">${this.cardTitle}</h5>
+                    <p class="content">${this.content}</p>
+                    <p class="date bottom">${this.cardDate}</p>
                 </div>
             </section>
         </div>`;
