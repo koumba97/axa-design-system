@@ -1,17 +1,9 @@
 @use "../../styles/variables.scss" as *;
 .axa-card {
-    //border: solid 2px;
-    width: fit-content;
     .container {
         display: flex;
         justify-content: flex-start;
         gap: var(--gap-3xl);
-
-        // .cover-img {
-        //     min-width: 0;
-        //     display: flex;
-        //     align-self: stretch;
-        // }
 
         &.inverted {
             flex-direction: row-reverse;
@@ -20,13 +12,21 @@
         &.sm {
             min-width: 440px;
             height: 88px;
+            gap: 8px;
+        }
+
+        &.md {
+            height: 185px;
+            gap: 14px;
+            .content {
+                border: solid;
+            }
         }
 
         &.lg {
             min-height: 240px;
             max-height: 400px;
             .content {
-                border: solid;
                 max-width: 400px;
             }
         }
@@ -43,25 +43,13 @@
         }
     }
 
-    // LARGE + MEDIUM
-    @media only screen and (max-width: $device-breakpoint-lg) {
-        .container {
-            //border: solid pink 2px;
-        }
-    }
-
     // SMALL
     @media only screen and (max-width: $device-breakpoint-md) {
         .container {
-            flex-direction: column;
-            //border: solid blue 2px;
-            max-width: 300px;
-
             &.lg {
+                max-width: 300px;
+                flex-direction: column;
                 max-height: unset;
-            }
-            &.inverted {
-                flex-direction: unset;
             }
         }
     }
