@@ -1,0 +1,6 @@
+@use "./fonts";
+@use "./design-tokens.css";
+
+body {
+    font-family: var(--font-family-base);
+}
