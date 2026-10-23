@@ -39,8 +39,10 @@ export class Card extends LitElement implements CardProps {
     inverted = false;
 
     render() {
+        const invertedClass = this.inverted ? "inverted" : "";
+
         return html`<div class="axa-card">
-            <section class="${this.type} container">
+            <section class="${this.type} ${invertedClass} container">
                 <axa-image src=${this.image} alt=${this.cardTitle}></axa-image>
                 <div class="horizontal-settings content">
                     <div class="v-center">

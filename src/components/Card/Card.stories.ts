@@ -17,7 +17,7 @@ const meta = {
             content=${args.content ?? ""}
             subhead=${args.subhead ?? ""}
             isInverse=${args.isInverse ?? ""}
-            inverted=${args.inverted ?? ""}
+            .inverted=${args.inverted ?? ""}
         ></axa-card>
     `,
     argTypes: {

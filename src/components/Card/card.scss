@@ -12,6 +12,9 @@
         //     display: flex;
         //     align-self: stretch;
         // }
+        &.inverted {
+            flex-direction: row-reverse;
+        }
 
         &.sm {
             min-width: 440px;
@@ -28,15 +31,15 @@
         }
     }
 
-    // LARGE
-    @media (min-width: $device-breakpoint-md) and (max-width: $device-breakpoint-lg) {
+    // LARGE + MEDIUM
+    @media only screen and (max-width: 1040px) {
         .container {
             border: solid pink 2px;
         }
     }
 
-    // MEDIUM
-    @media (min-width: $device-breakpoint-sm) and (max-width: $device-breakpoint-md) {
+    // SMALL
+    @media only screen and (max-width: 650px) {
         .container {
             flex-direction: column;
             border: solid blue 2px;
@@ -44,6 +47,9 @@
 
             &.lg {
                 max-height: unset;
+            }
+            &.inverted {
+                flex-direction: unset;
             }
         }
     }
