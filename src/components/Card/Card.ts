@@ -40,10 +40,15 @@ export class Card extends LitElement implements CardProps {
 
     render() {
         const invertedClass = this.inverted ? "inverted" : "";
+        const imageRatio = this.type === "bg" ? "16:9" : "1:1";
 
         return html`<div class="axa-card">
             <section class="${this.type} ${invertedClass} container">
-                <axa-image src=${this.image} alt=${this.cardTitle}></axa-image>
+                <axa-image
+                    src=${this.image}
+                    alt=${this.cardTitle}
+                    ratio=${imageRatio}
+                ></axa-image>
                 <div class="horizontal-settings content">
                     <div class="v-center">
                         <p class="subhead">${this.subhead}</p>

@@ -1,6 +1,6 @@
 @use "../../styles/variables.scss" as *;
 .axa-card {
-    border: solid 2px;
+    //border: solid 2px;
     width: fit-content;
     .container {
         display: flex;
@@ -12,6 +12,7 @@
         //     display: flex;
         //     align-self: stretch;
         // }
+
         &.inverted {
             flex-direction: row-reverse;
         }
@@ -29,20 +30,31 @@
                 max-width: 400px;
             }
         }
+
+        &.bg {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            .content {
+                position: absolute;
+                background-color: rgba(52, 60, 61, 0.72);
+                height: stretch;
+            }
+        }
     }
 
     // LARGE + MEDIUM
-    @media only screen and (max-width: 1040px) {
+    @media only screen and (max-width: $device-breakpoint-lg) {
         .container {
-            border: solid pink 2px;
+            //border: solid pink 2px;
         }
     }
 
     // SMALL
-    @media only screen and (max-width: 650px) {
+    @media only screen and (max-width: $device-breakpoint-md) {
         .container {
             flex-direction: column;
-            border: solid blue 2px;
+            //border: solid blue 2px;
             max-width: 300px;
 
             &.lg {
