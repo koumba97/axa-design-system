@@ -32,13 +32,13 @@
                 font-family: var(--font-family-base-title);
                 color: var(--card-title-color);
             }
-            .content {
+            .text-content {
                 color: var(--card-content-color);
                 margin-bottom: 8px;
             }
         }
 
-        &.inverted {
+        &.inverted:not(:has(.bg)) {
             flex-direction: row-reverse;
         }
 
@@ -74,8 +74,26 @@
             display: inline-flex;
             .content {
                 position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
                 background-color: var(--bg-card-background-color);
+                //background-color: pink;
+                padding: 16px 12px;
                 height: stretch;
+
+                width: calc(100% - 12px * 2);
+                .title,
+                .text-content,
+                .subhead,
+                .date {
+                    color: var(--neutral-00);
+                    //border: solid;
+                }
+
+                .bottom {
+                    display: none;
+                }
             }
         }
     }

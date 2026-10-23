@@ -60,7 +60,7 @@ export class Card extends LitElement implements CardProps {
                     </p>
 
                     <h5 class="title">${this.cardTitle}</h5>
-                    <p class="content">${this.content}</p>
+                    <p class="text-content">${this.content}</p>
                     <p class="date bottom">${this.cardDate}</p>
                 </div>
             </section>
