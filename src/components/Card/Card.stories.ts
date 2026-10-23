@@ -4,7 +4,7 @@ import { html } from "lit";
 import { Card } from "./Card";
 
 const meta = {
-    title: "Example/Card",
+    title: "Components/Card",
     tags: ["autodocs"],
     render: (args: CardProps) => html`
         <div

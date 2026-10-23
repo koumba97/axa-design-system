@@ -1,52 +1,29 @@
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
-
-import { fn } from "storybook/test";
-
-import type { ButtonProps } from "./Button";
+import type { ButtonProps } from "./Button.types";
 import { Button } from "./Button";
+import { html } from "lit";
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
-    title: "Example/Button",
+    title: "Components/Button",
     tags: ["autodocs"],
-    render: (args) => Button(args),
+    render: (args: ButtonProps) => html`
+            <axa-button
+                label=${args.label ?? ""}
+            ></axa-button>
+        </div>
+    `,
     argTypes: {
-        backgroundColor: { control: "color" },
-        size: {
-            control: { type: "select" },
-            options: ["small", "medium", "large"],
+        label: {
+            control: "text",
         },
     },
-    args: { onClick: fn() },
 } satisfies Meta<ButtonProps>;
 
 export default meta;
 type Story = StoryObj<ButtonProps>;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary: Story = {
+export const Default: Story = {
     args: {
-        primary: true,
-        label: "Button",
-    },
-};
-
-export const Secondary: Story = {
-    args: {
-        label: "Button",
-    },
-};
-
-export const Large: Story = {
-    args: {
-        size: "large",
-        label: "Button",
-    },
-};
-
-export const Small: Story = {
-    args: {
-        size: "small",
         label: "Button",
     },
 };

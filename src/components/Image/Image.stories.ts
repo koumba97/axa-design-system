@@ -4,7 +4,7 @@ import { Image } from "./Image";
 import { html } from "lit";
 
 const meta = {
-    title: "Example/Image",
+    title: "Components/Image",
     tags: ["autodocs"],
     render: (args: ImageProps) => html`
         <div style="display: flex; width:200px;">
