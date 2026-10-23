@@ -1,5 +1,12 @@
 @use "../../styles/variables.scss" as *;
 .axa-card {
+    &.dark {
+        --card-title-color: var(--neutral-00);
+        --card-subhead-color: var(--neutral-00);
+        --card-content-color: var(--neutral-00);
+        --card-date-color: var(--neutral-00);
+    }
+
     .container {
         display: flex;
         justify-content: flex-start;
@@ -114,7 +121,7 @@
         }
     }
 
-    // SMALL
+    // MEDIUM
     @media only screen and (max-width: $device-breakpoint-md) {
         .container {
             gap: var(--gap-md);
@@ -136,6 +143,37 @@
                         display: block;
                     }
                 }
+            }
+        }
+    }
+
+    // SMALL
+    @media only screen and (max-width: $device-breakpoint-sm) {
+        .container {
+            gap: var(--gap-sm);
+
+            &.md {
+                //max-width: 200px;
+                height: unset;
+                flex-direction: column;
+
+                .content {
+                    .top {
+                        margin-top: 0;
+                        .date {
+                            display: none;
+                        }
+                    }
+                    .bottom {
+                        display: block;
+                    }
+                }
+            }
+
+            &.sm {
+                // max-width: 150px;
+                min-width: unset;
+                flex-wrap: wrap;
             }
         }
     }

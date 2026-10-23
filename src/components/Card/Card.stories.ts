@@ -7,18 +7,25 @@ const meta = {
     title: "Example/Card",
     tags: ["autodocs"],
     render: (args: CardProps) => html`
-        <axa-card
-            type=${args.type ?? ""}
-            image=${args.image ?? ""}
-            cardDate=${args.cardDate ?? ""}
-            link=${args.link ?? "functional"}
-            breakpoint=${args.breakpoint ?? false}
-            cardTitle=${args.cardTitle ?? "cover"}
-            content=${args.content ?? ""}
-            subhead=${args.subhead ?? ""}
-            isInverse=${args.isInverse ?? ""}
-            .inverted=${args.inverted ?? ""}
-        ></axa-card>
+        <div
+            class="component-wrapper"
+            style="padding: 20px; background-color:${args.isInverse
+                ? "black"
+                : "white"};"
+        >
+            <axa-card
+                type=${args.type ?? ""}
+                image=${args.image ?? ""}
+                cardDate=${args.cardDate ?? ""}
+                link=${args.link ?? "functional"}
+                breakpoint=${args.breakpoint ?? false}
+                cardTitle=${args.cardTitle ?? "cover"}
+                content=${args.content ?? ""}
+                subhead=${args.subhead ?? ""}
+                .isInverse=${args.isInverse ?? ""}
+                .inverted=${args.inverted ?? ""}
+            ></axa-card>
+        </div>
     `,
     argTypes: {
         type: {
