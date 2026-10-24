@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import "./ButtonLink";
-import type { ButtonLink } from "./ButtonLink";
+//import type { ButtonLink } from "./ButtonLink";
 import type { ButtonLinkProps } from "./ButtonLink.types";
 
 describe("ButtonLink", () => {

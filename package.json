@@ -3,6 +3,11 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
+    "main": "./dist/index.js",
+    "exports": {
+        ".": "./dist/index.js",
+        "./style.css": "./dist/style.css"
+    },
     "scripts": {
         "build": "tsc && vite build",
         "storybook": "storybook dev -p 6006",
@@ -19,6 +24,7 @@
         "@storybook/addon-docs": "^10.6.3",
         "@storybook/addon-vitest": "^10.6.3",
         "@storybook/web-components-vite": "^10.6.3",
+        "@types/node": "^26.6.5",
         "@vitest/browser-playwright": "latest",
         "@vitest/coverage-v8": "latest",
         "jsdom": "^29.1.1",
