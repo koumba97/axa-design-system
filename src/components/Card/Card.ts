@@ -42,11 +42,13 @@ export class Card extends LitElement implements CardProps {
 
         return html`<div class="axa-card ${mode}">
             <section class="${this.type} ${invertedClass} container">
+            <div class="image-wrapper">
                 <axa-image
                     src=${this.image}
                     alt=${this.cardTitle}
                     ratio=${imageRatio}
                 ></axa-image>
+                </div>
                 <div class="content">
                     <p class="top">
                         <span class="subhead">${this.subhead}</span>

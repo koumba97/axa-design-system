@@ -68,7 +68,7 @@ export const SmallCard: Story = {
         cardDate: "11/12/2020",
         cardTitle: "Car Insurance",
         content:
-            "AXA Car insurance is tailored to your needs. Get your car insurance quote. And if you've got more than one car registered at your home address, check out our MultiCar discount.",
+            "AXA Car insurance is tailored to your needs. Get your car insurance quote.",
         subhead: "Member online",
         isInverse: false,
     },
