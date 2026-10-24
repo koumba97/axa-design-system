@@ -1,10 +1,10 @@
 import { html, LitElement, unsafeCSS } from "lit";
 import styles from "./button.scss?inline";
-import type { ButtonProps, ButtonType } from "./Button.types";
+import type { ButtonLinkProps, ButtonType } from "./ButtonLink.types";
 import { customElement, property } from "lit/decorators.js";
 
-@customElement("axa-button")
-export class Button extends LitElement implements ButtonProps {
+@customElement("axa-button-link")
+export class ButtonLink extends LitElement implements ButtonLinkProps {
     static styles = unsafeCSS(styles);
 
     @property({ type: String })
@@ -14,17 +14,17 @@ export class Button extends LitElement implements ButtonProps {
     url?: string;
 
     @property({ type: String })
-    type: ButtonType = "button";
+    buttonType: ButtonType = "button";
 
     render() {
-        return this.url
+        return this.buttonType == "link"
             ? html`
                   <a class="axa-button link" href=${this.url}>
                       ${this.label}
                   </a>
               `
             : html`
-                  <button class="axa-button button" type=${this.type}>
+                  <button class="axa-button button" type=${this.buttonType}>
                       ${this.label}
                   </button>
               `;

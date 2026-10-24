@@ -1,7 +1,7 @@
 export type ButtonType = "button" | "link";
 
-export interface ButtonProps {
+export interface ButtonLinkProps {
     label: string;
-    type: ButtonType;
+    buttonType: ButtonType;
     url?: string;
 }

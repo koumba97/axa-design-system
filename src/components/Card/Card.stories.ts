@@ -30,7 +30,7 @@ const meta = {
     argTypes: {
         type: {
             control: { type: "select" },
-            options: ["lg", "md", "sm", "bg"],
+            options: ["sm", "md", "lg", "bg"],
         },
         image: {
             control: "text",
@@ -65,16 +65,44 @@ const meta = {
 export default meta;
 type Story = StoryObj<CardProps>;
 
-export const Default: Story = {
+export const SmallCard: Story = {
+    args: {
+        type: "sm",
+        image: "public/images/AXA_Logo.svg.webp",
+        cardDate: "11/12/2020",
+        breakpoint: "750",
+        cardTitle: "Car Insurance",
+        content:
+            "AXA Car insurance is tailored to your needs. Get your car insurance quote. And if you've got more than one car registered at your home address, check out our MultiCar discount.",
+        subhead: "Member online",
+        isInverse: false,
+    },
+};
+
+export const MediumCard: Story = {
+    args: {
+        type: "md",
+        image: "public/images/AXA_Logo.svg.webp",
+        cardDate: "11/12/2020",
+        breakpoint: "750",
+        cardTitle: "Car Insurance",
+        content:
+            "AXA Car insurance is tailored to your needs. Get your car insurance quote. And if you've got more than one car registered at your home address, check out our MultiCar discount.",
+        subhead: "Member online",
+        isInverse: false,
+    },
+};
+
+export const LargeCard: Story = {
     args: {
         type: "lg",
-        image: "https://picsum.photos/500/800",
+        image: "public/images/AXA_Logo.svg.webp",
         cardDate: "11/12/2020",
         link: [
             {
                 url: "https://www.google.com",
-                label: "MAKE A CLAIM",
-                type: "link",
+                label: "See more",
+                type: "button",
                 variation: "primary",
                 isInverse: true,
             },
@@ -88,15 +116,15 @@ export const Default: Story = {
     },
 };
 
-export const MediumCard: Story = {
+export const BackgroundCard: Story = {
     args: {
-        type: "md",
-        image: "https://picsum.photos/500/800",
+        type: "bg",
+        image: "public/images/AXA_Logo.svg.webp",
         cardDate: "11/12/2020",
         link: [
             {
                 url: "https://www.google.com",
-                label: "MAKE A CLAIM",
+                label: "See more",
                 type: "link",
                 variation: "primary",
                 isInverse: true,

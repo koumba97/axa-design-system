@@ -71,12 +71,11 @@ export class Card extends LitElement implements CardProps {
                             ? html`<div class="links-container">
                                   ${this.link.map(
                                       (link) => html`
-                                          <axa-button
+                                          <axa-button-link
                                               url=${link.url}
                                               label=${link.label}
                                               type=${link.type}
-                                              >${link.label}</axa-button
-                                          >
+                                          ></axa-button-link>
                                       `,
                                   )}
                               </div>`
