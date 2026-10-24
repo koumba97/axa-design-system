@@ -50,11 +50,33 @@ const meta = {
 export default meta;
 type Story = StoryObj<ImageProps>;
 
-export const Default: Story = {
+export const Square: Story = {
     args: {
-        src: "https://picsum.photos/500/800",
+        src: "public/images/AXA_Logo.svg.webp",
         alt: "Sample image",
         ratio: "1:1",
+        hasBorder: false,
+        backgroundColor: "functional",
+        objectFit: "cover",
+    },
+};
+
+export const Vertical: Story = {
+    args: {
+        src: "public/images/AXA_Logo.svg.webp",
+        alt: "Sample image",
+        ratio: "2:3",
+        hasBorder: false,
+        backgroundColor: "functional",
+        objectFit: "cover",
+    },
+};
+
+export const Horizontal: Story = {
+    args: {
+        src: "public/images/AXA_Logo.svg.webp",
+        alt: "Sample image",
+        ratio: "4:3",
         hasBorder: false,
         backgroundColor: "functional",
         objectFit: "cover",

@@ -7,10 +7,14 @@
     --neutral-10: #d8d8d8; /* card border*/
     --neutral-00: #ffffff;
 
-    --neutral-opacity-50: rgba(52, 60, 61, 0.72);
+    --neutral-opacity-50: #343c3db8;
+    --neutral-opacity-00: #ffffffb8;
+    --blue-opacity-50: #00008f60;
 
+    --red-50: #ff1821; /* red AXA brand */
     --red-40: #d14623;
 
+    --blue-50:#00008f; /* blue AXA brand*/
     --blue-10: #d8eaff;
 
     /* sizes */
@@ -48,4 +52,7 @@
     --button-background-color: var(--red-40);
     --button-text-color: var(--neutral-00);
     --button-link-text-color: var(--red-40);
+
+    --focus-color: var(--blue-opacity-50);
+    --focus-color-dark: var(--neutral-opacity-00);
 }

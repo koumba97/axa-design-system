@@ -16,6 +16,7 @@ const meta = {
             <axa-button-link
                 label=${args.label ?? ""}
                 buttonStyle=${args.buttonStyle ?? "button"}
+                buttonType=${args.buttonType ?? "button"}
                 .isInverse=${args.isInverse ?? false}
                 url=${args.url ?? ""}
             ></axa-button-link>
@@ -28,6 +29,10 @@ const meta = {
         buttonStyle: {
             control: { type: "select" },
             options: ["button", "link"],
+        },
+        buttonType: {
+            control: { type: "select" },
+            options: ["button", "submit", "reset"],
         },
         isInverse: {
             control: { type: "boolean" },
