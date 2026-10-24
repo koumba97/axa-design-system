@@ -121,7 +121,7 @@
                 justify-content: end;
                 background-color: var(--bg-card-background-color);
                 padding: 16px 12px;
-                height: stretch;
+                height: calc(100% - 16px * 2);
 
                 width: calc(100% - 12px * 2);
                 .title,
@@ -172,6 +172,17 @@
             &.md {
                 flex-direction: column;
             }
+
+            &.bg {
+                .content {
+                    .title {
+                        font-size: 20px;
+                    }
+                    .text-content {
+                        font-size: 12px;
+                    }
+                }
+            }
         }
     }
 
@@ -210,6 +221,27 @@
                 height: auto;
                 min-width: unset;
                 flex-wrap: wrap;
+            }
+
+            &.bg {
+                .content {
+                    justify-content: unset;
+                    padding: 4px 8px;
+                    height: calc(100% - 4px * 2);
+                    width: calc(100% - 8px * 2);
+                    .subhead,
+                    .date {
+                        font-size: 8px;
+                    }
+                    .title {
+                        font-size: 12px;
+                        margin: 0 0 4px 0;
+                    }
+                    .text-content {
+                        font-size: 8px;
+                        margin: 0;
+                    }
+                }
             }
         }
     }
