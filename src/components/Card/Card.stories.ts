@@ -64,7 +64,7 @@ type Story = StoryObj<CardProps>;
 export const SmallCard: Story = {
     args: {
         type: "sm",
-        image: "public/images/AXA_Logo.svg.webp",
+        image: "/images/AXA_Logo.svg.webp",
         cardDate: "11/12/2020",
         cardTitle: "Car Insurance",
         content:
@@ -77,7 +77,7 @@ export const SmallCard: Story = {
 export const MediumCard: Story = {
     args: {
         type: "md",
-        image: "public/images/AXA_Logo.svg.webp",
+        image: "/images/AXA_Logo.svg.webp",
         cardDate: "11/12/2020",
         cardTitle: "Car Insurance",
         content:
@@ -90,7 +90,7 @@ export const MediumCard: Story = {
 export const LargeCard: Story = {
     args: {
         type: "lg",
-        image: "public/images/AXA_Logo.svg.webp",
+        image: "/images/AXA_Logo.svg.webp",
         cardDate: "11/12/2020",
         link: [
             {
@@ -112,7 +112,7 @@ export const LargeCard: Story = {
 export const BackgroundCard: Story = {
     args: {
         type: "bg",
-        image: "public/images/AXA_Logo.svg.webp",
+        image: "/images/AXA_Logo.svg.webp",
         cardDate: "11/12/2020",
         link: [
             {
