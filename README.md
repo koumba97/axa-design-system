@@ -2,7 +2,7 @@
 
 ## Presentation
 
-AXA Design system is a UI components library built with [Lit]('') and [Typescript]('').
+AXA Design system is a UI components library built with [Lit]('https://lit.dev/') and [Typescript]('https://www.typescriptlang.org/').
 
 This library allow users to import web components in various frontend project while centralazing styles and UI elements.
 
@@ -28,7 +28,7 @@ npm install
 
 ### 2. Run Storybook
 
-The project was build with [Storybook](''), which allows you to vizualize the components, go through their variants and inspect their APIs.
+The project was build with [Storybook]('https://storybook.js.org/'), which allows you to vizualize the components, go through their variants and inspect their APIs.
 
 To run Storybook, run the following command:
 
@@ -38,7 +38,7 @@ npm run storybook
 
 ### 3. Run the tests
 
-The tests were written using [Vitest]('') as the project was built with [Vite]('').
+The tests were written using [Vitest]('https://vitest.dev/') as the project was built with [Vite]('https://vite.dev/').
 
 To run the tests, run the following command:
 
