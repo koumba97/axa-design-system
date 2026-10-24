@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import type { ImageProps } from "./Image.types";
-import { Image } from "./Image";
+import "./Image";
 import { html } from "lit";
 
 const meta = {

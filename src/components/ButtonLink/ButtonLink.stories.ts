@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import type { ButtonLinkProps } from "./ButtonLink.types";
-import { ButtonLink } from "./ButtonLink";
+import "./ButtonLink";
 import { html } from "lit";
 
 const meta = {
