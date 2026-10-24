@@ -28,7 +28,7 @@
 
     /* SEMENTIC TOKENS */
     --font-family-base-title: 'Publico Headline';
-    --font-family-base: 'Helvetica';
+    --font-family-base: 'Source Sans';
 
     --radius-sm: var(--size-4);
     --radius-md: var(--size-8);
