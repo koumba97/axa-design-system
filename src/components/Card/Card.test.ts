@@ -98,20 +98,57 @@ describe("Card", () => {
         card.remove();
     });
 
-    it("should display the title", async () => {
+    it("should render a button link for each link provided", async () => {
+        const card = document.createElement("axa-card") as HTMLElement &
+            CardProps & { updateComplete: Promise<boolean> };
+
+        card.link = [
+            { url: "/insurance", label: "See more", type: "button" },
+            { url: "/contact", label: "Contact us", type: "button" },
+        ];
+
+        document.body.appendChild(card);
+        await card.updateComplete;
+
+        expect(
+            card.shadowRoot?.querySelectorAll("axa-button-link").length,
+        ).toBe(2);
+
+        card.remove();
+    });
+
+    it("should display the title, subhead, text content and date", async () => {
         const title = "Car insurance";
+        const subhead = "Insurance";
+        const content = "AXA Car insurance is tailored to your needs.";
+        const date = "24/10/2026";
+
         const card = document.createElement("axa-card") as HTMLElement &
             CardProps & {
                 updateComplete: Promise<boolean>;
             };
 
         card.cardTitle = title;
+        card.subhead = subhead;
+        card.content = content;
+        card.cardDate = date;
         document.body.appendChild(card);
         await card.updateComplete;
 
         expect(card.shadowRoot?.querySelector("h5")?.textContent?.trim()).toBe(
             title,
         );
+        expect(
+            card.shadowRoot?.querySelector(".subhead")?.textContent?.trim(),
+        ).toBe(subhead);
+        expect(
+            card.shadowRoot
+                ?.querySelector(".text-content")
+                ?.textContent?.trim(),
+        ).toBe(content);
+        expect(
+            card.shadowRoot?.querySelector(".date")?.textContent?.trim(),
+        ).toBe(`- ${date}`);
 
         card.remove();
     });
