@@ -125,7 +125,7 @@ export const BackgroundCard: Story = {
             {
                 url: "https://www.google.com",
                 label: "See more",
-                type: "link",
+                type: "button",
                 variation: "primary",
                 isInverse: true,
             },

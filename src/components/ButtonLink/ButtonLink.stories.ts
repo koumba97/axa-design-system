@@ -7,9 +7,16 @@ const meta = {
     title: "Components/ButtonLink",
     tags: ["autodocs"],
     render: (args: ButtonLinkProps) => html`
+        <div
+            class="component-wrapper"
+            style="padding: 20px; background-color:${args.isInverse
+                ? "black"
+                : "white"};"
+        >
             <axa-button-link
                 label=${args.label ?? ""}
-                buttonType=${args.buttonType ?? "button"}
+                buttonStyle=${args.buttonStyle ?? "button"}
+                .isInverse=${args.isInverse ?? false}
                 url=${args.url ?? ""}
             ></axa-button-link>
         </div>
@@ -18,9 +25,12 @@ const meta = {
         label: {
             control: "text",
         },
-        buttonType: {
+        buttonStyle: {
             control: { type: "select" },
             options: ["button", "link"],
+        },
+        isInverse: {
+            control: { type: "boolean" },
         },
     },
 } satisfies Meta<ButtonLinkProps>;
@@ -37,6 +47,6 @@ export const Button: Story = {
 export const Link: Story = {
     args: {
         label: "Button",
-        buttonType: "link",
+        buttonStyle: "link",
     },
 };

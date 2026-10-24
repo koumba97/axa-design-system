@@ -1,6 +1,6 @@
 import { html, LitElement, unsafeCSS } from "lit";
 import styles from "./button.scss?inline";
-import type { ButtonLinkProps, ButtonType } from "./ButtonLink.types";
+import type { ButtonLinkProps, ButtonStyle } from "./ButtonLink.types";
 import { customElement, property } from "lit/decorators.js";
 
 @customElement("axa-button-link")
@@ -14,17 +14,25 @@ export class ButtonLink extends LitElement implements ButtonLinkProps {
     url?: string;
 
     @property({ type: String })
-    buttonType: ButtonType = "button";
+    buttonStyle: ButtonStyle = "button";
+
+    @property({ type: Boolean })
+    isInverse: boolean = false;
 
     render() {
-        return this.buttonType == "link"
+        const mode = this.isInverse ? "dark" : "light";
+
+        return this.buttonStyle == "link"
             ? html`
-                  <a class="axa-button link" href=${this.url}>
+                  <a class="axa-button-link link ${mode}" href=${this.url}>
                       ${this.label}
                   </a>
               `
             : html`
-                  <button class="axa-button button" type=${this.buttonType}>
+                  <button
+                      class="axa-button-link button ${mode}"
+                      type=${this.buttonStyle}
+                  >
                       ${this.label}
                   </button>
               `;

@@ -74,7 +74,7 @@ export class Card extends LitElement implements CardProps {
                                           <axa-button-link
                                               url=${link.url}
                                               label=${link.label}
-                                              type=${link.type}
+                                              buttonStyle=${link.type}
                                           ></axa-button-link>
                                       `,
                                   )}

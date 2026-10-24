@@ -1,4 +1,4 @@
-.axa-button {
+.axa-button-link {
     border: none;
     border-radius: 0;
     margin: 0;
@@ -19,6 +19,11 @@
         color: var(--button-text-color);
         font-size: 12px;
         text-transform: uppercase;
+
+        &.dark {
+            --button-background-color: var(--neutral-00);
+            --button-text-color: var(--neutral-50);
+        }
     }
 
     &.link {
@@ -29,5 +34,9 @@
         text-decoration: none;
         font-size: 14px;
         text-transform: uppercase;
+
+        &.dark {
+            --button-link-text-color: var(--neutral-00);
+        }
     }
 }

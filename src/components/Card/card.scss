@@ -5,6 +5,12 @@
         --card-subhead-color: var(--neutral-00);
         --card-content-color: var(--neutral-00);
         --card-date-color: var(--neutral-00);
+
+        axa-button-link {
+            --button-link-text-color: var(--neutral-00);
+            --button-background-color: var(--neutral-00);
+            --button-text-color: var(--neutral-50);
+        }
     }
 
     .container {
@@ -123,6 +129,12 @@
 
                 .bottom {
                     display: none;
+                }
+
+                axa-button-link {
+                    --button-link-text-color: var(--neutral-00);
+                    --button-background-color: var(--neutral-00);
+                    --button-text-color: var(--neutral-50);
                 }
             }
         }
