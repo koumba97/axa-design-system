@@ -18,7 +18,6 @@ const meta = {
                 image=${args.image ?? ""}
                 cardDate=${args.cardDate ?? ""}
                 .link=${args.link ?? []}
-                breakpoint=${args.breakpoint ?? false}
                 cardTitle=${args.cardTitle ?? "cover"}
                 content=${args.content ?? ""}
                 subhead=${args.subhead ?? ""}
@@ -40,9 +39,6 @@ const meta = {
         },
         link: {
             control: "object",
-        },
-        breakpoint: {
-            control: "text",
         },
         cardTitle: {
             control: "text",
@@ -70,7 +66,6 @@ export const SmallCard: Story = {
         type: "sm",
         image: "public/images/AXA_Logo.svg.webp",
         cardDate: "11/12/2020",
-        breakpoint: "750",
         cardTitle: "Car Insurance",
         content:
             "AXA Car insurance is tailored to your needs. Get your car insurance quote. And if you've got more than one car registered at your home address, check out our MultiCar discount.",
@@ -84,7 +79,6 @@ export const MediumCard: Story = {
         type: "md",
         image: "public/images/AXA_Logo.svg.webp",
         cardDate: "11/12/2020",
-        breakpoint: "750",
         cardTitle: "Car Insurance",
         content:
             "AXA Car insurance is tailored to your needs. Get your car insurance quote. And if you've got more than one car registered at your home address, check out our MultiCar discount.",
@@ -107,7 +101,6 @@ export const LargeCard: Story = {
                 isInverse: true,
             },
         ],
-        breakpoint: "750",
         cardTitle: "Car Insurance",
         content:
             "AXA Car insurance is tailored to your needs. Get your car insurance quote. And if you've got more than one car registered at your home address, check out our MultiCar discount.",
@@ -130,7 +123,6 @@ export const BackgroundCard: Story = {
                 isInverse: true,
             },
         ],
-        breakpoint: "750",
         cardTitle: "Car Insurance",
         content:
             "AXA Car insurance is tailored to your needs. Get your car insurance quote. And if you've got more than one car registered at your home address, check out our MultiCar discount.",

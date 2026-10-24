@@ -21,9 +21,6 @@ export class Card extends LitElement implements CardProps {
     link: Link[] = [];
 
     @property({ type: String })
-    breakpoint = "";
-
-    @property({ type: String })
     cardTitle = "";
 
     @property({ type: String })

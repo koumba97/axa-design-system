@@ -5,7 +5,6 @@ export interface CardProps {
     image: string;
     cardDate: string;
     link: Link[];
-    breakpoint: string;
     cardTitle: string;
     content: string;
     subhead: string;
