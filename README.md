@@ -56,7 +56,7 @@ You can go through the components and the documentation of the design system via
 
 ### Install the design system
 
-The library is available as a npm package.
+The library is available as a [npm package]('https://www.npmjs.com/package/koum-axa-design-system').
 Install it in your project using:
 
 ```shell
