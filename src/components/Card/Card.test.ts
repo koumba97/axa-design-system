@@ -6,51 +6,68 @@ describe("Card", () => {
     it("should be registered as a custom element", () => {
         expect(customElements.get("axa-card")).toBeDefined();
     });
-});
 
-it("should render the card", () => {
-    const card = document.createElement("axa-card");
+    it("should render the card", () => {
+        const card = document.createElement("axa-card");
 
-    document.body.appendChild(card);
+        document.body.appendChild(card);
 
-    expect(card.shadowRoot).not.toBeNull();
+        expect(card.shadowRoot).not.toBeNull();
 
-    card.remove();
-});
+        card.remove();
+    });
 
-it("should update type prop (size) changes", async () => {
-    const card = document.createElement("axa-card") as HTMLElement &
-        CardProps & {
-            updateComplete: Promise<boolean>;
-        };
+    it("should update type prop (size) changes", async () => {
+        const card = document.createElement("axa-card") as HTMLElement &
+            CardProps & {
+                updateComplete: Promise<boolean>;
+            };
 
-    document.body.appendChild(card);
+        document.body.appendChild(card);
 
-    card.type = "sm";
-    await card.updateComplete;
+        card.type = "sm";
+        await card.updateComplete;
 
-    expect(card.type).toBe("sm");
+        expect(card.type).toBe("sm");
 
-    card.type = "lg";
-    await card.updateComplete;
+        card.type = "lg";
+        await card.updateComplete;
 
-    expect(card.type).toBe("lg");
+        expect(card.type).toBe("lg");
 
-    card.remove();
-});
+        card.remove();
+    });
 
-it("should update when inverted prop changes", async () => {
-    const card = document.createElement("axa-card") as HTMLElement &
-        CardProps & {
-            updateComplete: Promise<boolean>;
-        };
-    document.body.appendChild(card);
-    await card.updateComplete;
+    it("should update when inverted prop changes", async () => {
+        const card = document.createElement("axa-card") as HTMLElement &
+            CardProps & {
+                updateComplete: Promise<boolean>;
+            };
+        document.body.appendChild(card);
+        await card.updateComplete;
 
-    card.inverted = true;
-    await card.updateComplete;
+        card.inverted = true;
+        await card.updateComplete;
 
-    expect(card.inverted).toBe(true);
+        expect(card.inverted).toBe(true);
 
-    card.remove();
+        card.remove();
+    });
+
+    it("should display the title", async () => {
+        const card = document.createElement("axa-card") as HTMLElement &
+            CardProps & {
+                updateComplete: Promise<boolean>;
+            };
+
+        card.cardTitle = "Car insurance";
+        document.body.appendChild(card);
+        await card.updateComplete;
+
+        expect(card.shadowRoot?.querySelector("h5")?.textContent?.trim()).toBe(
+            "Car insurance",
+        );
+
+        card.remove();
+    });
 });
