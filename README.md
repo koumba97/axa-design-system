@@ -53,3 +53,7 @@ The Storybook and the UI library have been deployed on production. Here's how to
 ### Storybook
 
 You go through the components and the documentation of the design system via this link: [https://koum-axa-design-system.vercel.app/]('https://koum-axa-design-system.vercel.app/').
+
+### Install the design system
+
+...

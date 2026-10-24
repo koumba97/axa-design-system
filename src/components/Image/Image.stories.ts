@@ -52,7 +52,7 @@ type Story = StoryObj<ImageProps>;
 
 export const Square: Story = {
     args: {
-        src: "public/images/AXA_Logo.svg.webp",
+        src: "/images/AXA_Logo.svg.webp",
         alt: "Sample image",
         ratio: "1:1",
         hasBorder: false,
@@ -63,7 +63,7 @@ export const Square: Story = {
 
 export const Vertical: Story = {
     args: {
-        src: "public/images/AXA_Logo.svg.webp",
+        src: "/images/AXA_Logo.svg.webp",
         alt: "Sample image",
         ratio: "2:3",
         hasBorder: false,
@@ -74,7 +74,7 @@ export const Vertical: Story = {
 
 export const Horizontal: Story = {
     args: {
-        src: "public/images/AXA_Logo.svg.webp",
+        src: "/images/AXA_Logo.svg.webp",
         alt: "Sample image",
         ratio: "4:3",
         hasBorder: false,
