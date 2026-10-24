@@ -2,7 +2,7 @@
     "name": "koum-axa-design-system",
     "private": false,
     "description": "AXA Design system is a UI components library built with Lit and Typescript.",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "type": "module",
     "files": [
         "dist"

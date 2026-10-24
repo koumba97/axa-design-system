@@ -27,13 +27,53 @@ describe("Card", () => {
 
         card.type = "sm";
         await card.updateComplete;
+        expect(
+            card.shadowRoot
+                ?.querySelector(".container")
+                ?.classList.contains("sm"),
+        ).toBe(true);
 
-        expect(card.type).toBe("sm");
+        card.type = "md";
+        await card.updateComplete;
+        expect(
+            card.shadowRoot
+                ?.querySelector(".container")
+                ?.classList.contains("md"),
+        ).toBe(true);
 
         card.type = "lg";
         await card.updateComplete;
+        expect(
+            card.shadowRoot
+                ?.querySelector(".container")
+                ?.classList.contains("lg"),
+        ).toBe(true);
 
-        expect(card.type).toBe("lg");
+        card.type = "bg";
+        await card.updateComplete;
+        expect(
+            card.shadowRoot
+                ?.querySelector(".container")
+                ?.classList.contains("bg"),
+        ).toBe(true);
+
+        card.remove();
+    });
+
+    it("should update image src", async () => {
+        const imageSrc = "/images/AXA_Logo.svg.webp";
+        const card = document.createElement("axa-card") as HTMLElement &
+            CardProps & {
+                updateComplete: Promise<boolean>;
+            };
+
+        document.body.appendChild(card);
+
+        card.image = imageSrc;
+        await card.updateComplete;
+        const image = card.shadowRoot?.querySelector("axa-image");
+
+        expect(image?.getAttribute("src")).toBe(imageSrc);
 
         card.remove();
     });
@@ -49,23 +89,28 @@ describe("Card", () => {
         card.inverted = true;
         await card.updateComplete;
 
-        expect(card.inverted).toBe(true);
+        expect(
+            card.shadowRoot
+                ?.querySelector(".container")
+                ?.classList.contains("inverted"),
+        ).toBe(true);
 
         card.remove();
     });
 
     it("should display the title", async () => {
+        const title = "Car insurance";
         const card = document.createElement("axa-card") as HTMLElement &
             CardProps & {
                 updateComplete: Promise<boolean>;
             };
 
-        card.cardTitle = "Car insurance";
+        card.cardTitle = title;
         document.body.appendChild(card);
         await card.updateComplete;
 
         expect(card.shadowRoot?.querySelector("h5")?.textContent?.trim()).toBe(
-            "Car insurance",
+            title,
         );
 
         card.remove();
