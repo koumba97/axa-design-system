@@ -68,7 +68,7 @@ npm install koum-axa-design-system
 Import the components you need and the library's stylesheet in your project:
 
 ```typescript
-import { Card, ButtonLink } from "koum-axa-design-system";
+import "koum-axa-design-system";
 import "koum-axa-design-system/style.css";
 ```
 
